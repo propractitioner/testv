@@ -1,0 +1,136 @@
+.tourism-info {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tourism-info .header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #ff6b6b;
+}
+
+.tourism-info .header h1 {
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+.tourism-info .subtitle {
+  color: #666;
+  font-size: 1.1em;
+}
+
+.coming-soon-banner {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 6px 20px rgba(245, 87, 108, 0.3);
+}
+
+.banner-icon {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+
+.coming-soon-banner h2 {
+  margin: 0 0 15px 0;
+  font-size: 2em;
+}
+
+.coming-soon-banner p {
+  margin: 0;
+  font-size: 1.1em;
+  opacity: 0.95;
+}
+
+.categories-preview {
+  margin-bottom: 40px;
+}
+
+.categories-preview h3 {
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #f0f0f0;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  border-color: #ff6b6b;
+}
+
+.category-icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.category-name {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.placeholder-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #ff6b6b;
+}
+
+.placeholder-card h3 {
+  margin-top: 0;
+  color: #1a1a1a;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.placeholder-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.placeholder-card p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .tourism-info {
+    padding: 15px;
+  }
+
+  .tourism-info .header h1 {
+    font-size: 2em;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
