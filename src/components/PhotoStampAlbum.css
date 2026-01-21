@@ -1,0 +1,343 @@
+.photo-stamp-album {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc4 100%);
+  padding: 2rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.album-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-header h1 {
+  margin: 0;
+  color: #5a4a3a;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.album-header p {
+  margin: 0.5rem 0 0 0;
+  color: #7a6a5a;
+  font-size: 1.1rem;
+}
+
+.upload-section {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.upload-area {
+  flex: 1;
+  border: 3px dashed #8b7355;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #6a5345;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #5a4a3a;
+  font-weight: 600;
+}
+
+.upload-subtext {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8a7a6a;
+}
+
+.clear-button {
+  padding: 1rem 1.5rem;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.clear-button:hover {
+  background: #c9302c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.processing-message {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 400px;
+  font-size: 1.2rem;
+  color: #5a4a3a;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.empty-album {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #8a7a6a;
+  font-size: 1.2rem;
+}
+
+.empty-album p {
+  margin: 0.5rem 0;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.stamp-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stamp-card:hover {
+  transform: translateY(-5px) rotate(0.5deg);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.stamp-container {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f6f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.stamp-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.stamp-container:hover .stamp-image {
+  transform: scale(1.05);
+}
+
+.stamp-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metadata-input {
+  padding: 0.6rem;
+  border: 2px solid #d9ceb8;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: rgba(255, 255, 255, 0.8);
+  color: #5a4a3a;
+  transition: border-color 0.3s ease;
+}
+
+.metadata-input:focus {
+  outline: none;
+  border-color: #8b7355;
+  background: white;
+}
+
+.metadata-input::placeholder {
+  color: #a99a8a;
+}
+
+.delete-button {
+  padding: 0.5rem;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.delete-button:hover {
+  background: #c9302c;
+  transform: scale(1.05);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: #c9302c;
+  transform: rotate(90deg);
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border-radius: 8px;
+}
+
+.modal-info {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5a4a3a;
+}
+
+.modal-info p {
+  margin: 0.5rem 0;
+}
+
+.modal-info strong {
+  color: #3a2a1a;
+}
+
+@media (max-width: 768px) {
+  .photo-stamp-album {
+    padding: 1rem;
+  }
+
+  .album-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .album-header p {
+    font-size: 0.9rem;
+  }
+
+  .upload-section {
+    flex-direction: column;
+  }
+
+  .stamp-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .upload-area {
+    padding: 2rem 1rem;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .stamp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .album-header h1 {
+    font-size: 1.5rem;
+  }
+}
