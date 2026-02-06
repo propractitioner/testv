@@ -4,9 +4,10 @@ import LanguageSwitcher from './components/LanguageSwitcher';
 import DriftIceInfo from './components/DriftIceInfo';
 import TourismInfo from './components/TourismInfo';
 import RestaurantInfo from './components/RestaurantInfo';
+import PdfSplitter from './components/PdfSplitter';
 import './App.css';
 
-type Tab = 'driftIce' | 'tourism' | 'restaurants';
+type Tab = 'driftIce' | 'tourism' | 'restaurants' | 'pdfSplitter';
 
 function App() {
   const { t } = useTranslation();
@@ -39,12 +40,19 @@ function App() {
         >
           🍽️ {t('tabs.restaurants')}
         </button>
+        <button
+          className={`tab-button ${activeTab === 'pdfSplitter' ? 'active' : ''}`}
+          onClick={() => setActiveTab('pdfSplitter')}
+        >
+          📄 {t('tabs.pdfSplitter')}
+        </button>
       </nav>
 
       <main className="app-content">
         {activeTab === 'driftIce' && <DriftIceInfo />}
         {activeTab === 'tourism' && <TourismInfo />}
         {activeTab === 'restaurants' && <RestaurantInfo />}
+        {activeTab === 'pdfSplitter' && <PdfSplitter />}
       </main>
 
       <footer className="app-footer">

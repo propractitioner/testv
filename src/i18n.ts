@@ -9,7 +9,8 @@ const resources = {
       tabs: {
         driftIce: '유빙 정보',
         tourism: '관광 정보',
-        restaurants: '맛집 정보'
+        restaurants: '맛집 정보',
+        pdfSplitter: 'PDF 분할'
       },
       driftIce: {
         title: '오호츠크해 유빙 현황',
@@ -73,6 +74,35 @@ const resources = {
           local: '향토 요리'
         }
       },
+      pdfSplitter: {
+        title: 'PDF 페이지 분할기',
+        subtitle: 'PDF 파일을 지정한 페이지 수별로 분할합니다',
+        upload: {
+          placeholder: 'PDF 파일을 클릭하여 선택하세요',
+          pageCount: '총 {{count}}페이지'
+        },
+        settings: {
+          title: '분할 설정',
+          pagesPerSplit: '파일당 페이지 수',
+          preview: '총 {{totalPages}}페이지를 {{pagesPerSplit}}페이지씩 나누면 {{splitCount}}개의 파일이 생성됩니다.'
+        },
+        actions: {
+          split: '분할 시작',
+          splitting: '분할 중...',
+          reset: '초기화'
+        },
+        results: {
+          title: '분할 결과',
+          download: '다운로드',
+          downloadAll: '전체 다운로드',
+          pages: '{{start}} - {{end}} 페이지'
+        },
+        errors: {
+          notPdf: 'PDF 파일만 업로드 가능합니다.',
+          loadFailed: 'PDF 파일을 읽을 수 없습니다.',
+          splitFailed: 'PDF 분할 중 오류가 발생했습니다.'
+        }
+      },
       language: {
         korean: '한국어',
         english: 'English'
@@ -85,7 +115,8 @@ const resources = {
       tabs: {
         driftIce: 'Drift Ice',
         tourism: 'Tourism',
-        restaurants: 'Restaurants'
+        restaurants: 'Restaurants',
+        pdfSplitter: 'PDF Splitter'
       },
       driftIce: {
         title: 'Okhotsk Sea Drift Ice Status',
@@ -147,6 +178,35 @@ const resources = {
           izakaya: 'Izakaya',
           cafe: 'Cafe/Dessert',
           local: 'Local Cuisine'
+        }
+      },
+      pdfSplitter: {
+        title: 'PDF Page Splitter',
+        subtitle: 'Split PDF files by specified number of pages',
+        upload: {
+          placeholder: 'Click to select a PDF file',
+          pageCount: '{{count}} pages total'
+        },
+        settings: {
+          title: 'Split Settings',
+          pagesPerSplit: 'Pages per file',
+          preview: 'Splitting {{totalPages}} pages into {{splitCount}} files ({{pagesPerSplit}} pages each).'
+        },
+        actions: {
+          split: 'Split PDF',
+          splitting: 'Splitting...',
+          reset: 'Reset'
+        },
+        results: {
+          title: 'Split Results',
+          download: 'Download',
+          downloadAll: 'Download All',
+          pages: 'Pages {{start}} - {{end}}'
+        },
+        errors: {
+          notPdf: 'Only PDF files are allowed.',
+          loadFailed: 'Failed to load PDF file.',
+          splitFailed: 'An error occurred while splitting the PDF.'
         }
       },
       language: {
